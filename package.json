@@ -14,5 +14,8 @@
     "rewind"
   ],
   "author": "Ethan Ferrari <ethan@ethanferrari.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "immutable": "^3.7.5"
+  }
 }
