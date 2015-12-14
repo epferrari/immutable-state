@@ -1,6 +1,6 @@
 {
   "name": "@epferrari/immutable-state",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A constructor for a stack of immutable history states, using Immutable.js",
   "main": "index.js",
   "scripts": {
@@ -13,9 +13,9 @@
     "history",
     "rewind"
   ],
-  "repository":{
-    "type":"git",
-    "url":"https://github.com/epferrari/immutable-state.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/epferrari/immutable-state.git"
   },
   "author": "Ethan Ferrari <ethan@ethanferrari.com>",
   "license": "MIT",
