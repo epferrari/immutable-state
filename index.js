@@ -7,7 +7,7 @@ var Immutable = require('immutable');
 * @param {object} initialState
 */
 
-function State(initialState){
+module.exports = function State(initialState){
 
   // private stack of app states
   // never manipulate history stack directly, use State methods
