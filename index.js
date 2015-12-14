@@ -22,12 +22,12 @@ module.exports = function State(initialState){
     },
     // ensure that setting state via assignment performs an immutable operation
     set: function(s){
-      let currentState = history[historyIndex];
+      var currentState = history[historyIndex];
       if(typeof s === 'function'){
         s = s( history[historyIndex].toJS() );
       }
 
-      let newState = currentState.merge(s);
+      var newState = currentState.merge(s);
       history = history.slice(0,historyIndex + 1);
       history.push(newState);
       historyIndex++;
@@ -56,7 +56,7 @@ module.exports = function State(initialState){
         s = s(this.state);
       }
     }
-    let newState = this.getImmutableState().merge(s);
+    var newState = this.getImmutableState().merge(s);
     history = history.slice(0,historyIndex + 1);
     history.push(newState);
     historyIndex++;
@@ -106,7 +106,7 @@ module.exports = function State(initialState){
   * @returns {object} state
   */
   this.reset = function reset(force){
-    let _initialState = this.getInitialState();
+    var _initialState = this.getInitialState();
     if(force === true){
       // hard reset, clears the entire history stack, no previous history are saved
       history = [new Immutable.Map(_initialState)];
@@ -131,7 +131,7 @@ module.exports = function State(initialState){
   */
   this.rewind = function rewind(n){
     if(n < 0) n = 0;
-    let target = historyIndex - n;
+    var target = historyIndex - n;
     if(target > 0){
       historyIndex = target;
     }else{
